@@ -1,22 +1,33 @@
-.hero{
+.hero {
   background-color: #181818;
   height: 100vh;
+  position: relative;
+  overflow: hidden;
 
-  .conteudo{
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .conteudo {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: #fff;
     height: 100vh;
+    position: relative;
+    z-index: 1;
 
-    .titulo{
+    .titulo {
       font-weight: 700;
       font-size: 48px;
       text-align: center;
     }
 
-    .subtitulo{
+    .subtitulo {
       font-weight: 400;
       font-size: 14px;
       text-align: center;
