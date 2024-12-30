@@ -63,11 +63,29 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    position: relative; /* Torna o contêiner da linha e do ponto relativo */
+
+    .ponto {
+      width: 10px;
+      height: 10px;
+      background-color: #FFCD00;
+      box-shadow: 0px 0px 10px 2px #ffcd00;
+      border-radius: 50%;
+      position: absolute;  /* Faz o ponto se posicionar sobre a linha */
+      top: 0%;  /* Posiciona o ponto verticalmente no centro da linha */
+      left: 0%;  /* Inicia o ponto na posição inicial da linha */
+      transform: translateY(-50%);  /* Ajusta a posição para centralizar verticalmente */
+      z-index: 1;
+      
+      /* Animações combinadas */
+      animation: moverPontoClientes 10s infinite linear, pulsarClientes 3s infinite alternate; 
+    }
 
     > span.linha{
       height: 1px;
       background-color: #181818;
       width: 100%;
+      position: relative;  /* Necessário para que o ponto seja posicionado em relação a esta linha */
     }
 
     .titulo-clientes{
@@ -83,5 +101,28 @@
       font-weight: 400;
       padding-right: 80px;
     }
+  }
+}
+
+/* Animação para mover o ponto ao longo da linha */
+@keyframes moverPontoClientes {
+  0% {
+    left: 100%;  /* Começa à esquerda */
+  }
+  100% {
+    left: 0%;  /* Vai até a extremidade direita */
+  }
+}
+
+/* Animação de pulsação do ponto */
+@keyframes pulsarClientes {
+  0% {
+    transform: translateY(-50%) scale(1);  /* Tamanho original */
+  }
+  50% {
+    transform: translateY(-50%) scale(1.5);  /* Aumenta o ponto */
+  }
+  100% {
+    transform: translateY(-50%) scale(1);  /* Retorna ao tamanho original */
   }
 }

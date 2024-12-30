@@ -6,8 +6,8 @@ function MarcasAutorizadas() {
     <>
       <div id="marcas-autorizadas" className="marcas-autorizadas">
         <div className="header-marcas-autorizadas">
-        <div className="ponto"></div>
-        <span className="linha"></span> 
+          <div className="ponto"></div>
+          <span className="linha"></span>
           <div className="titulo-marcas-autorizadas">Marcas Autorizadas</div>
           <div className="subtitulo-marcas-autorizadas">Conheça as marcas autorizadas com que trabalhamos</div>
         </div>
