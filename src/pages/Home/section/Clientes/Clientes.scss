@@ -1,0 +1,87 @@
+.clientes{
+  background-color: #d9d9d9;
+  padding: 60px 0;
+
+  display: grid;
+  grid-template-columns: 60% 30%;
+  align-items: center;
+  justify-content: space-between;
+
+  .carrossel-feedbacks{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    justify-content: flex-start;
+    
+    .feedback{
+      background-color: rgba(24, 24, 24, 0.88);
+      padding: 25px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+
+      .cabecalho-feedback{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+
+        .nome-avaliacao{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+
+          .nome{
+            font-size: 16px;
+            font-weight: 700;
+            color: #d9d9d9;
+          }
+
+          .avaliacao{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+          }
+        }
+      }
+
+      .depoimento-cliente{
+        color: #d9d9d9;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  .header-clientes{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    > span.linha{
+      height: 1px;
+      background-color: #181818;
+      width: 100%;
+    }
+
+    .titulo-clientes{
+      padding-right: 80px;
+      color: #181818;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    .subtitulo-clientes{
+      color: #181818;
+      font-size: 14px;
+      font-weight: 400;
+      padding-right: 80px;
+    }
+  }
+}
