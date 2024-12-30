@@ -1,4 +1,4 @@
-.fixed-buttons{
+.fixed-button-whatsapp {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -7,10 +7,9 @@
   gap: 10px;
   z-index: 1000;
 
-  .button{
+  .button {
     width: 50px;
     height: 50px;
-    // background-color: #25d366;
     border: none;
     border-radius: 50%;
     display: flex;
@@ -20,26 +19,20 @@
     cursor: pointer;
     transition: transform 0.3s ease, opacity 0.3s ease;
 
-    &:hover{
+    &:hover {
       transform: scale(1.1);
     }
 
-    svg{
+    svg {
       width: 24px;
       height: 24px;
-
       fill: white;
     }
   }
 
   > .whatsapp-button {
     background-color: #25d366; /* Verde WhatsApp */
-    animation: shake 0.5s ease-in-out 5s infinite;
-  }
-
-  
-  > .scroll-up-button {
-    background-color: #FFCD00; /* Amarelo para Scroll Up */
+    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite; /* Animação com timing e duração exatos */
   }
 
   @keyframes shake {
@@ -47,13 +40,13 @@
       transform: translateX(0);
     }
     25% {
-      transform: translateX(-5px);
+      transform: translateX(-5px); /* Movimento para a esquerda */
     }
     50% {
-      transform: translateX(5px);
+      transform: translateX(5px); /* Movimento para a direita */
     }
     75% {
-      transform: translateX(-5px);
+      transform: translateX(-5px); /* Movimento para a esquerda novamente */
     }
   }
 }

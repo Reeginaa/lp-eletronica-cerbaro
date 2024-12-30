@@ -1,0 +1,36 @@
+.fixed-button-scroll-up {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+
+  .button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: white;
+    }
+  }
+
+  > .scroll-up-button {
+    background-color: #181818; /* Amarelo para Scroll Up */
+  }
+}

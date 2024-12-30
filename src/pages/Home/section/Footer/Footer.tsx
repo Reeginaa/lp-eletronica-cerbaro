@@ -1,4 +1,5 @@
-import FixedButtons from "../../../../components/FixedButtons/FixedButtons"
+import FixedButtonScrollUp from "../../../../components/FixedButtonScrollUp/FixedButtonScrollUp"
+import FixedButtonWhatsApp from "../../../../components/FixedButtonWhatsApp/FixedButtonWhatsApp"
 import "./Footer.scss"
 
 function Footer() {
@@ -51,7 +52,8 @@ function Footer() {
         </div>
       </div>
 
-      <FixedButtons />
+      <FixedButtonWhatsApp />
+      <FixedButtonScrollUp />
     </>
   )
 }
