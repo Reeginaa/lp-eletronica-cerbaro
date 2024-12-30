@@ -29,7 +29,7 @@ function Footer() {
           <div className="coluna">
             <div className="titulo-coluna">Contato</div>
             <div className="informacoes">
-              <a href="#" target="_blank" className="info-link">WhatsApp: (54) 99999-9999</a>
+              <a href="https://api.whatsapp.com/send?phone=5554996335085&text=Ol%C3%A1!%0AEstou%20no%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" className="info-link">WhatsApp: (54) 9 9633-5085</a>
               <a href="mailto:seuemail@email.com" target="_blank" className="info-link">E-mail: seuemail@email.com</a>
             </div>
           </div>
