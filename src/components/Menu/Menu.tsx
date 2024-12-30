@@ -6,7 +6,7 @@ function Menu() {
     <>
       <div className="navbar">
         <div className="container mx-auto">
-          <img src="/logo.png" alt="Logo" className="logo"/>
+          <img src="src/assets/images/logo.png" alt="Logo" className="logo"/>
           <ul className="menus">
             <li className="menu-item">
               <a href="#servicos">Serviços</a>

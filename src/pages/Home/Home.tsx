@@ -1,6 +1,7 @@
 import Menu from "../../components/Menu/Menu"
 import Clientes from "./section/Clientes/Clientes"
 import Contato from "./section/Contato/Contato"
+import Footer from "./section/Footer/Footer"
 import Hero from "./section/Hero/Hero"
 import MarcasAutorizadas from "./section/MarcasAutorizadas/MarcasAutorizadas"
 import QuemSomos from "./section/QuemSomos/QuemSomos"
@@ -17,6 +18,7 @@ function Home() {
       <Clientes />
       <QuemSomos />
       <Contato />
+      <Footer />
     </>
   )
 }
