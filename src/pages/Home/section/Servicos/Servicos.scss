@@ -1,29 +1,29 @@
-.servicos{
+.servicos {
   background-color: #E9E8E8;
+  padding-top: 60px;
 
-  .header-servicos{
-    padding-top: 60px;
-
+  .header-servicos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-content: center;
+    position: relative; /* Necessário para posicionamento absoluto do ponto */
 
-    .texto-servicos{
+    .texto-servicos {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 5px;
 
-      .titulo-servicos{
+      .titulo-servicos {
         font-size: 32px;
         font-weight: 700;
         color: #181818;
         text-align: center;
       }
 
-      .subtitulo-servicos{
+      .subtitulo-servicos {
         font-size: 14px;
         font-weight: 400;
         color: #181818;
@@ -31,37 +31,60 @@
       }
     }
 
-    > span.linha{
-      height: 1px;
-      background-color: #181818;
-      width: 100%;
+    .ponto-animado {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      > .ponto {
+        width: 10px;
+        height: 10px;
+        background-color: #FFCD00;
+        box-shadow: 0px 0px 10px 2px #ffcd00;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%; /* Centraliza verticalmente */
+        left: 0%; /* Começa na extremidade esquerda */
+        transform: translate(-50%, -50%);
+        z-index: 1;
+
+        /* Animações combinadas */
+        animation: moverPonto 10s infinite linear, pulsarPonto 3s infinite alternate;
+      }
+
+      > span.linha {
+        height: 1px;
+        background-color: #181818;
+        width: 100%;
+        position: relative; /* Necessário para o ponto se posicionar em relação à linha */
+      }
     }
   }
 
-  .container{
+  .container {
     padding-top: 40px;
     padding-bottom: 60px;
 
-    .conteudo-servicos{
+    .conteudo-servicos {
       display: grid;
       grid-template-columns: 40% 20% 40%;
       align-items: center;
       justify-content: space-between;
 
-      .tipos-servicos{
+      .tipos-servicos {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
 
-        .tipo-servico{
+        .tipo-servico {
           font-size: 16px;
           font-weight: 700;
           color: #181818;
         }
       }
 
-      > span.divisor{
+      > span.divisor {
         height: 650px;
         background-color: #BBBBBB;
         width: 1px;
@@ -72,24 +95,47 @@
           width: 100%;
           height: 300px; // Ajuste conforme necessário
         }
-      
+
         .swiper-slide {
           display: flex;
           justify-content: center;
           align-items: center;
+
           img {
             max-width: 100%;
             max-height: 100%;
             object-fit: cover;
           }
         }
-      
+
         .swiper-button-next,
         .swiper-button-prev {
           color: #333; // Cor dos botões de navegação
         }
       }
-      
     }
+  }
+}
+
+/* Animação para mover o ponto ao longo da linha */
+@keyframes moverPonto {
+  0% {
+    left: 100%; /* Começa na extremidade esquerda */
+  }
+  100% {
+    left: 0%; /* Vai até a extremidade direita */
+  }
+}
+
+/* Animação para pulsar o ponto */
+@keyframes pulsarPonto {
+  0% {
+    transform: translate(-50%, -50%) scale(1); /* Tamanho original */
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5); /* Aumenta o ponto */
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1); /* Retorna ao tamanho original */
   }
 }
