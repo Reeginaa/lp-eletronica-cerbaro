@@ -25,7 +25,7 @@
       z-index: 1;
       
       /* Animações combinadas */
-      animation: moverPonto 10s infinite linear, pulsarPonto 3s infinite alternate; 
+      animation: moverPontoMarcasAutorizadas 10s infinite linear, pulsarPontoMarcasAutorizadas 3s infinite alternate; 
     }
 
     > span.linha {
@@ -72,7 +72,7 @@
 }
 
 /* Animação para mover o ponto ao longo da linha */
-@keyframes moverPonto {
+@keyframes moverPontoMarcasAutorizadas {
   0% {
     left: 0%;  /* Começa à esquerda */
   }
@@ -82,7 +82,7 @@
 }
 
 /* Animação de pulsação do ponto */
-@keyframes pulsarPonto {
+@keyframes pulsarPontoMarcasAutorizadas {
   0% {
     transform: translateY(-50%) scale(1);  /* Tamanho original */
   }
