@@ -1,0 +1,59 @@
+.fixed-buttons{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+
+  .button{
+    width: 50px;
+    height: 50px;
+    // background-color: #25d366;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+    &:hover{
+      transform: scale(1.1);
+    }
+
+    svg{
+      width: 24px;
+      height: 24px;
+
+      fill: white;
+    }
+  }
+
+  > .whatsapp-button {
+    background-color: #25d366; /* Verde WhatsApp */
+    animation: shake 0.5s ease-in-out 5s infinite;
+  }
+
+  
+  > .scroll-up-button {
+    background-color: #FFCD00; /* Amarelo para Scroll Up */
+  }
+
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+  }
+}

@@ -4,7 +4,7 @@ function QuemSomos() {
 
   return (
     <>
-      <div className="quem-somos">
+      <div id="quem-somos" className="quem-somos">
         <div className="header-quem-somos">
           <span className="linha"></span>
           <div className="texto-quem-somos">

@@ -4,7 +4,7 @@ function MarcasAutorizadas() {
 
   return (
     <>
-      <div className="marcas-autorizadas">
+      <div id="marcas-autorizadas" className="marcas-autorizadas">
         <div className="header-marcas-autorizadas">
           <span className="linha"></span>
           <div className="titulo-marcas-autorizadas">Marcas Autorizadas</div>

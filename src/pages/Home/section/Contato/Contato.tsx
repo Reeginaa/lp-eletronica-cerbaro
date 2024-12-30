@@ -4,7 +4,7 @@ function Contato() {
 
   return (
     <>
-      <div className="contato">
+      <div id="contato" className="contato">
         <div className="container mx-auto">
           <div className="titulo-contato">Entre em Contato Conosco</div>
           <div className="descricao-contato">

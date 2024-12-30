@@ -2,6 +2,14 @@ import "./Menu.scss"
 
 function Menu() {
 
+  const handleScroll = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
+    event.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <div className="navbar">
@@ -9,19 +17,19 @@ function Menu() {
           <img src="src/assets/images/logo.png" alt="Logo" className="logo"/>
           <ul className="menus">
             <li className="menu-item">
-              <a href="#servicos">Serviços</a>
+              <a href="#servicos" onClick={(e) => handleScroll(e, "servicos")}>Serviços</a>
             </li>
             <li className="menu-item">
-              <a href="#marcas-autorizadas">Marcas Autorizadas</a>
+              <a href="#marcas-autorizadas" onClick={(e) => handleScroll(e, "marcas-autorizadas")}>Marcas Autorizadas</a>
             </li>
             <li className="menu-item">
-              <a href="#clientes">Clientes</a>
+              <a href="#clientes" onClick={(e) => handleScroll(e, "clientes")}>Clientes</a>
             </li>
             <li className="menu-item">
-              <a href="#quem-somos">Quem Somos</a>
+              <a href="#quem-somos" onClick={(e) => handleScroll(e, "quem-somos")}>Quem Somos</a>
             </li>
             <li className="menu-item">
-              <a href="#contato">Contato</a>
+              <a href="#contato" onClick={(e) => handleScroll(e, "contato")}>Contato</a>
             </li>
           </ul>
         </div>

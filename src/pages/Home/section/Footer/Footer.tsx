@@ -1,3 +1,4 @@
+import FixedButtons from "../../../../components/FixedButtons/FixedButtons"
 import "./Footer.scss"
 
 function Footer() {
@@ -49,6 +50,8 @@ function Footer() {
           <div className="texto-info">Todos os direitos reservados - 2024</div>
         </div>
       </div>
+
+      <FixedButtons />
     </>
   )
 }

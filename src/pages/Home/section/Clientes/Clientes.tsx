@@ -4,7 +4,7 @@ function Clientes() {
 
   return (
     <>
-      <div className="clientes">
+      <div id="clientes" className="clientes">
         <div className="carrossel-feedbacks">
           <div className="feedback">
             <div className="cabecalho-feedback">
