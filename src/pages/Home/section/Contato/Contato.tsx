@@ -1,6 +1,6 @@
 import "./Contato.scss"
 
-const Contato = () => {
+function Contato() {
 
   return (
     <>

@@ -6,7 +6,7 @@ import MarcasAutorizadas from "./section/MarcasAutorizadas/MarcasAutorizadas"
 import QuemSomos from "./section/QuemSomos/QuemSomos"
 import Servicos from "./section/Servicos/Servicos"
 
-const Home = () => {
+function Home() {
 
   return (
     <>

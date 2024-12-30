@@ -1,18 +1,6 @@
-import { Navigation } from "swiper/modules";
 import "./Servicos.scss"
-import { Swiper, SwiperSlide } from "swiper/react";
-import CarrosselServicos from "../../../../components/CarrosselServicos/CarrosselServicos";
-// import "swiper/css";
-// import "swiper/css/navigation";
 
-const Servicos = () => {
-
-  const images = [
-    "/public/carrossel-servicos/servicos-em-eletronica/1.jpg",
-    "/public/carrossel-servicos/servicos-em-eletronica/2.jpg",
-    "/public/carrossel-servicos/servicos-em-eletronica/3.jpg",
-    "/public/carrossel-servicos/servicos-em-eletronica/4.jpg"
-  ];
+function Servicos() {
 
   return (
     <>
@@ -83,7 +71,7 @@ const Servicos = () => {
             </div>
             <span className="divisor"></span>
             <div className="carousel">
-              <CarrosselServicos/>
+              Fazer Carrossel
             </div>
           </div>
         </div>

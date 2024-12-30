@@ -1,6 +1,6 @@
 import "./Hero.scss"
 
-const Hero = () => {
+function Hero() {
 
   return (
     <>

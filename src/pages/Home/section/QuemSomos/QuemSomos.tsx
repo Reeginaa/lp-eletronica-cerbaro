@@ -1,6 +1,6 @@
 import "./QuemSomos.scss"
 
-const QuemSomos = () => {
+function QuemSomos() {
 
   return (
     <>
