@@ -1,10 +1,16 @@
 .marcas-autorizadas {
   background-color: #181818;
   padding: 60px 0;
-  display: grid;
-  grid-template-columns: 35% 55%;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+
+  @media(min-width: 992px){
+    display: grid;
+    grid-template-columns: 35% 55%;
+    align-items: center;
+  }
 
   .header-marcas-autorizadas {
     display: flex;
@@ -36,17 +42,25 @@
     }
 
     .titulo-marcas-autorizadas {
-      padding-left: 80px;
+      padding-left: 15px;
       color: #d9d9d9;
       font-size: 32px;
       font-weight: 700;
+
+      @media(min-width: 992px){
+        padding-left: 80px;
+      }
     }
 
     .subtitulo-marcas-autorizadas {
       color: #D9D9D9;
       font-size: 14px;
       font-weight: 400;
-      padding-left: 80px;
+      padding-left: 15px;
+
+      @media(min-width: 992px){
+        padding-left: 80px;
+      }
     }
   }
 
@@ -55,6 +69,11 @@
     align-content: center;
     justify-content: flex-start;
     gap: 60px;
+    padding: 50px 15px 0;
+
+    @media(min-width: 992px){
+      padding: 0;
+    }
 
     .marca {
       display: flex;
