@@ -25,7 +25,7 @@ function Clientes() {
             </div>
           </div>
 
-          <div className="feedback">
+          {/* <div className="feedback">
             <div className="cabecalho-feedback">
               <img src="src/assets/images/clientes/cliente.png" alt="Foto cliente" />
               <div className="nome-avaliacao">
@@ -42,7 +42,7 @@ function Clientes() {
             <div className="depoimento-cliente">
               Lorem ipsum dolor sit amet consectetur. Tortor tortor arcu porttitor tempus in. In quam orci in tortor dictum blandit. Feugiat amet sed malesuada pulvinar scelerisque metus sit risus. Integer ligula eget pulvinar diam viverra commodo commodo magna mauris.Lorem ipsum dolor sit amet consectetur. Tortor tortor arcu porttitor tempus in. In quam orci in tortor dictum blandit. Feugiat amet sed malesuada pulvinar scelerisque metus sit risus. Integer ligula eget pulvinar diam viverra commodo commodo magna mauris.
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="header-clientes">
