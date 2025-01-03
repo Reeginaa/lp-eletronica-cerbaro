@@ -4,24 +4,30 @@
   .header-quem-somos {
     padding-top: 60px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     align-items: center;
     justify-content: center;
+
+    @media(min-width: 992px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     .ponto-animado {
       display: flex;
       align-items: center;
       position: relative;
 
-      > .ponto {
+      >.ponto {
         width: 10px;
         height: 10px;
         background-color: #FFCD00;
         box-shadow: 0px 0px 10px 2px #ffcd00;
         border-radius: 50%;
         position: absolute;
-        top: 50%; /* Centraliza verticalmente */
-        left: 0%; /* Começa na extremidade esquerda */
+        top: 50%;
+        /* Centraliza verticalmente */
+        left: 0%;
+        /* Começa na extremidade esquerda */
         transform: translate(-50%, -50%);
         z-index: 1;
 
@@ -29,11 +35,12 @@
         animation: moverPontoQuemSomos 10s infinite linear, pulsarPontoQuemSomos 3s infinite alternate;
       }
 
-      > span.linha {
+      >span.linha {
         height: 1px;
         background-color: #D9D9D9;
         width: 100%;
-        position: relative; /* Necessário para o ponto se posicionar em relação à linha */
+        position: relative;
+        /* Necessário para o ponto se posicionar em relação à linha */
       }
     }
 
@@ -61,17 +68,34 @@
   }
 
   .container {
-    padding: 60px 0;
+    padding: 60px 15px;
     display: grid;
-    grid-template-columns: 40% 55%; /* Imagens à esquerda (40%) e texto à direita (55%) */
+    grid-template-columns: repeat(1, 1fr);
+    /* Imagens à esquerda (40%) e texto à direita (55%) */
     justify-items: start;
-    gap: 30px; /* Espaço entre as colunas */
+    gap: 30px;
+    /* Espaço entre as colunas */
+
+    @media(min-width: 992px) {
+      grid-template-columns: 40% 55%;
+      padding: 60px 0;
+    }
 
     /* Imagens à esquerda - elas rolam normalmente */
     .imagens {
       display: flex;
       flex-direction: column;
       gap: 50px;
+
+      /* Aqui está o truque para o texto fixar no scroll */
+      position: sticky;
+      max-height: 460px; /* Limita o tamanho do texto para a altura da tela */
+      overflow-y: auto;  /* Garante que o texto role dentro de si, mas a div de texto permaneça fixa */
+      z-index: 10;
+
+      @media(min-width: 992px){
+        position: relative;
+      }
     }
 
     /* Texto fixo à direita */
@@ -80,13 +104,16 @@
       font-size: 14px;
       font-weight: 400;
       text-align: justify;
+      position: relative;
 
-      /* Aqui está o truque para o texto fixar no scroll */
-      position: sticky;
-      top: 60px; /* Distância do topo da página */
-      max-height: 420px; /* Limita o tamanho do texto para a altura da tela */
-      overflow-y: auto; /* Garante que o texto role dentro de si, mas a div de texto permaneça fixa */
-      z-index: 10;
+      @media(min-width: 992px) {
+        /* Aqui está o truque para o texto fixar no scroll */
+        position: sticky;
+        top: 60px; /* Distância do topo da página */
+        max-height: 420px; /* Limita o tamanho do texto para a altura da tela */
+        overflow-y: auto;  /* Garante que o texto role dentro de si, mas a div de texto permaneça fixa */
+        z-index: 10;
+      }
     }
   }
 }
@@ -94,22 +121,30 @@
 /* Animação para mover o ponto ao longo da linha */
 @keyframes moverPontoQuemSomos {
   0% {
-    left: 0%; /* Começa na extremidade esquerda */
+    left: 0%;
+    /* Começa na extremidade esquerda */
   }
+
   100% {
-    left: 100%; /* Vai até a extremidade direita */
+    left: 100%;
+    /* Vai até a extremidade direita */
   }
 }
 
 /* Animação para pulsar o ponto */
 @keyframes pulsarPontoQuemSomos {
   0% {
-    transform: translate(-50%, -50%) scale(1); /* Tamanho original */
+    transform: translate(-50%, -50%) scale(1);
+    /* Tamanho original */
   }
+
   50% {
-    transform: translate(-50%, -50%) scale(1.5); /* Aumenta o ponto */
+    transform: translate(-50%, -50%) scale(1.5);
+    /* Aumenta o ponto */
   }
+
   100% {
-    transform: translate(-50%, -50%) scale(1); /* Retorna ao tamanho original */
+    transform: translate(-50%, -50%) scale(1);
+    /* Retorna ao tamanho original */
   }
 }
