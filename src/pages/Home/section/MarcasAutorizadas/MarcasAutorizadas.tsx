@@ -14,16 +14,28 @@ function MarcasAutorizadas() {
         <div className="carrossel-marcas">
           <div className="marca">
             <img src="src/assets/images/marcas-autorizadas/marca.png" alt="Marca 1" />
-            <div className="nome-marca">Marca 1</div>
+            <div className="nome-marca">Banda Audioparts</div>
           </div>
           <div className="marca">
             <img src="src/assets/images/marcas-autorizadas/marca.png" alt="Marca 1" />
-            <div className="nome-marca">Marca 2</div>
+            <div className="nome-marca">Expert Eletronics</div>
           </div>
           <div className="marca">
             <img src="src/assets/images/marcas-autorizadas/marca.png" alt="Marca 1" />
-            <div className="nome-marca">Marca 3</div>
+            <div className="nome-marca">JFA Eletrônicos</div>
           </div>
+          <div className="marca">
+            <img src="src/assets/images/marcas-autorizadas/marca.png" alt="Marca 1" />
+            <div className="nome-marca">Soundigital</div>
+          </div>
+          {/* <div className="marca">
+            <img src="src/assets/images/marcas-autorizadas/marca.png" alt="Marca 1" />
+            <div className="nome-marca">Stetsom</div>
+          </div>
+          <div className="marca">
+            <img src="src/assets/images/marcas-autorizadas/marca.png" alt="Marca 1" />
+            <div className="nome-marca">Zebu</div>
+          </div> */}
         </div>
       </div>
     </>
